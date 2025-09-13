@@ -12,8 +12,10 @@ namespace BasicPrograms
             Console.WriteLine("3. Find Largest of Three Numbers");
             Console.WriteLine("4. Check Leap Year");
             Console.WriteLine("5. Find Grade");
+            Console.WriteLine("6. Check Number Is Prime");
 
-            Console.Write("Enter choice (1-5): ");
+
+            Console.Write("Enter choice (1-6): ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
@@ -44,6 +46,15 @@ namespace BasicPrograms
                     Console.WriteLine("Enter Mark");
                     int mark = Convert.ToInt32(Console.ReadLine());
                     BasicOperations.FindGrade(mark);
+                    break;
+                    case 6:
+                        Console.WriteLine("Enter a number:");
+                        int number = Convert.ToInt32(Console.ReadLine());
+                        bool isPrime = BasicOperations.IsPrime(number);
+                        if (isPrime)
+                            Console.WriteLine($"{number} is a prime number.");
+                        else
+                            Console.WriteLine($"{number} is not a prime number.");
                     break;
                 default:
                     Console.WriteLine("Invalid choice");
