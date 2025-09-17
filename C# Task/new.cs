@@ -25,18 +25,19 @@
 //                new student { Name = "erik", Marks = 50 },
 //            };
 
-//            var max = students.Max(x => x.Marks);
-//            var secondLargest = students
-//                .Where(s => s.Marks != max);
-//            var secondLargest1 = secondLargest.Max(e => e.Marks);
+//            var secondnum = students
+//                .OrderByDescending(s => s.Marks)
+//                .Skip(0)
+//                .FirstOrDefault();
+
+//            Console.WriteLine($"Student with the second highest marks: {secondnum.Name}, Marks: {secondnum.Marks}");
 
 
 
 
-           
-            
-//                Console.WriteLine(secondLargest1);
-            
+
+
+
 
 
 
